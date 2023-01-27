@@ -7,14 +7,19 @@ console.log(dc)
 console.log(marvel) 
 */
 
-import heroes from './data/heroes'
-import superHeroes from './data/heroes'
+//import heroes from '../data/heroes'
+import superHeroes from '../data/heroes'
 
 
-const getHeroById = ( id ) => superHeroes.find(hero => hero.id === id)
+export const getHeroById = ( id ) => superHeroes.find(hero => hero.id === id)
 
-console.log(getHeroById(3))
+export const getHeroesByOwner = ( id ) => superHeroes.filter(element => element.owner === id)
 
-const getHeroesByOwner = ( id ) => superHeroes.filter(element => element.owner === id)
+/**
+ * Esta es la forma de importar y exportar si se encontrase en el index
+import { getHeroById, getHeroesByOwner } from "./bases/08-imp-exp" 
 
-console.log(getHeroesByOwner('Marvel'))
+console.log( getHeroById(2) )
+
+console.log( getHeroesByOwner('Marvel') )
+ */
