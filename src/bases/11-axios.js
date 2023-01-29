@@ -11,20 +11,24 @@ const giphyApi = axios.create({
     }
 })
 
+
+export default giphyApi
+
+/*
 giphyApi.get('/random')
     .then(resp => {
        
         /*
         Desestructrurando el objeto data que se recive en resp(response)
         Es una forma más fácil de hacer y leer
-        */
+        
         const { data } = resp.data
         const { url } = data.images.original
         
         /* 
         Forma complicada y dificil de leer
         const url = resp.data.data.images.original.url
-        */
+        
 
         //Insercion de la imagen al body
         const img = document.createElement('img')
@@ -32,3 +36,4 @@ giphyApi.get('/random')
 
         document.body.append( img )
     })
+*/
